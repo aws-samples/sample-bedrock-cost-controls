@@ -1,0 +1,15 @@
+# Runtime dependencies for notebooks/demo_cost_controls.ipynb
+# Pinned to the versions verified working on 2026-08-06 (Python 3.12.7).
+#
+# Setup:
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r notebooks/requirements-demo.txt
+#   .venv\Scripts\python.exe -m ipykernel install --user \
+#       --name bedrock-cost-controls --display-name "Python (bedrock-cost-controls)"
+#
+# Note: this is separate from the top-level requirements.txt, which holds the
+# CDK build dependencies (aws-cdk-lib, constructs) and is not needed to run the demo.
+
+boto3==1.43.66
+botocore==1.43.66
+ipykernel==7.3.0

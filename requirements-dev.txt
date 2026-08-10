@@ -1,0 +1,15 @@
+# Development and review dependencies. Not required to deploy the stack.
+#
+#   pip install -r requirements.txt -r requirements-dev.txt
+#
+# cdk-nag is pinned to the 2.x line, which targets aws-cdk-lib v2. The 3.x line
+# requires a newer aws-cdk-lib floor and is not compatible with the pin above.
+-r requirements.txt
+
+cdk-nag==2.38.2
+pytest==8.3.4
+
+# The Lambda runtime supplies boto3, so it is not a deploy dependency. The unit
+# tests import the handler modules directly and therefore need it locally.
+boto3>=1.35.0
+
